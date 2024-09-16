@@ -47,7 +47,7 @@ docker-compose up --build
 ## Usage
 1. **Transcoding Endpoint**
 
-POST /transcode
+    - POST /transcode
 
 3. **Request Example using curl:**
 ```
