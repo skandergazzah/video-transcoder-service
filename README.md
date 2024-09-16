@@ -46,9 +46,8 @@ docker-compose up --build
 
 ## Usage
 1. **Transcoding Endpoint**
-POST /transcode
 
-Upload a video file to be transcoded. The request should include a file parameter named video.
+POST /transcode
 
 3. **Request Example using curl:**
 ```
