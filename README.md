@@ -10,6 +10,7 @@ A scalable video transcoding service built with Go, Gin, and FFmpeg. This servic
 
 ## Project Structure
 
+ ```
 ├── controller
 │ └── transcode.go # Handles transcoding requests
 ├── model
