@@ -23,7 +23,6 @@ Here’s a screenshot of the project running:
 │ └── transcode.go          # Defines data models for transcoding results
 ├── service
 │ └── transcode.go          # Contains the logic for transcoding videos
-├── uploads                 # Directory where uploaded videos are stored
 ├── transcode.sh            # Shell script for FFmpeg transcoding
 ├── Dockerfile              # Dockerfile for building the application image
 ├── docker-compose.yml      # Docker Compose configuration file
