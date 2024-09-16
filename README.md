@@ -2,6 +2,12 @@
 
 A scalable video transcoding service built with Go, Gin, and FFmpeg. This service supports multiple resolutions (1080p, 720p, 480p, 360p, 240p, 144p) with concurrent processing and Docker integration.
 
+## Project Running Example
+
+Here’s a screenshot of the project running:
+
+![Project Running Result](./images/running-result.png)
+
 ## Features
 
 - Accepts video file uploads via a POST request.
@@ -47,7 +53,7 @@ docker-compose up --build
 ## Usage
 1. **Transcoding Endpoint**
 
-    - POST /transcode
+- POST /transcode
 
 3. **Request Example using curl:**
 ```
