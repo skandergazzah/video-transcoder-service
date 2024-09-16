@@ -42,6 +42,7 @@ func TranscodeService(inputFilePath, outputDir, fileNameWithoutExt string) (succ
 
 			// Call the shell script
 			cmd := exec.Command("/app/transcode.sh", inputFilePath, resName, outputFile)
+			fmt.Println("Running command:", cmd.String())
 			cmdOutput, err := cmd.CombinedOutput()
 			if err != nil {
 				mutex.Lock()
