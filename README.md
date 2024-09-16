@@ -23,7 +23,7 @@ A scalable video transcoding service built with Go, Gin, and FFmpeg. This servic
 ├── docker-compose.yml # Docker Compose configuration file
 ├── main.go # Entry point of the application
 └── .gitattributes # Ensures consistent line endings for shell scripts
-
+```
 ## Prerequisites
 
 - Docker
@@ -36,22 +36,22 @@ A scalable video transcoding service built with Go, Gin, and FFmpeg. This servic
    ```bash
    git clone https://github.com/skandergazzah/video-transcoder-service.git
    cd video-transcoder-service
-
+   ```
 2. Build and start the service using Docker Compose:
-   docker-compose up --build
+   - docker-compose up --build
 
 3. Access the service:
-The service will be available at http://localhost:9000.
+- The service will be available at http://localhost:9000.
 
 ## Usage
-Transcoding Endpoint
+- Transcoding Endpoint
 POST /transcode
 Upload a video file to be transcoded. The request should include a file parameter named video.
 
-Request Example using curl:
+- Request Example using curl:
 curl --location 'http://localhost:9000/transcode' --form 'video=@"/C:/Users/Skander/Downloads/surf.mp4"'
 
-Response Example:
+- Response Example:
 {
   "message": "Transcoding in progress",
   "resolutions_in_progress": [
@@ -65,8 +65,8 @@ Response Example:
 }
 
 ## Acknowledgments
-Gin - Web framework for Go.
-FFmpeg - Multimedia framework for handling video, audio, and other multimedia files and streams.
+- Gin - Web framework for Go.
+- FFmpeg - Multimedia framework for handling video, audio, and other multimedia files and streams.
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+[MIT](https://choosealicense.com/licenses/mit/)
