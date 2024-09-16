@@ -12,17 +12,17 @@ A scalable video transcoding service built with Go, Gin, and FFmpeg. This servic
 
  ```
 ├── controller
-│ └── transcode.go # Handles transcoding requests
+│ └── transcode.go          # Handles transcoding requests
 ├── model
-│ └── transcode.go # Defines data models for transcoding results
+│ └── transcode.go          # Defines data models for transcoding results
 ├── service
-│ └── transcode.go # Contains the logic for transcoding videos
-├── uploads # Directory where uploaded videos are stored
-├── transcode.sh # Shell script for FFmpeg transcoding
-├── Dockerfile # Dockerfile for building the application image
-├── docker-compose.yml # Docker Compose configuration file
-├── main.go # Entry point of the application
-└── .gitattributes # Ensures consistent line endings for shell scripts
+│ └── transcode.go          # Contains the logic for transcoding videos
+├── uploads                 # Directory where uploaded videos are stored
+├── transcode.sh            # Shell script for FFmpeg transcoding
+├── Dockerfile              # Dockerfile for building the application image
+├── docker-compose.yml      # Docker Compose configuration file
+├── main.go                 # Entry point of the application
+└── .gitattributes          # Ensures consistent line endings for shell scripts
 ```
 ## Prerequisites
 
@@ -33,25 +33,29 @@ A scalable video transcoding service built with Go, Gin, and FFmpeg. This servic
 
 1. **Clone the repository:**
 
-   ```bash
-   git clone https://github.com/skandergazzah/video-transcoder-service.git
-   cd video-transcoder-service
-   ```
-2. Build and start the service using Docker Compose:
-   - docker-compose up --build
-
-3. Access the service:
+```bash
+git clone https://github.com/skandergazzah/video-transcoder-service.git
+cd video-transcoder-service
+```
+2. **Build and start the service using Docker Compose:**
+```
+docker-compose up --build
+```
+3. **Access the service:**
 - The service will be available at http://localhost:9000.
 
 ## Usage
-- Transcoding Endpoint
+1. **Transcoding Endpoint**
 POST /transcode
+
 Upload a video file to be transcoded. The request should include a file parameter named video.
 
-- Request Example using curl:
+3. **Request Example using curl:**
+```
 curl --location 'http://localhost:9000/transcode' --form 'video=@"/C:/Users/Skander/Downloads/surf.mp4"'
-
-- Response Example:
+```
+3. **Response Example:**
+```
 {
   "message": "Transcoding in progress",
   "resolutions_in_progress": [
@@ -63,7 +67,7 @@ curl --location 'http://localhost:9000/transcode' --form 'video=@"/C:/Users/Skan
     "144p"
   ]
 }
-
+```
 ## Acknowledgments
 - Gin - Web framework for Go.
 - FFmpeg - Multimedia framework for handling video, audio, and other multimedia files and streams.
